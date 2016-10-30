@@ -1,0 +1,8 @@
+{{#if session.isAuthenticated}}
+  {{book-listing content=model}}
+  
+{{else}}
+  {{outlet}}
+  {{main-slider}}
+  {{book-listing content=model}}
+{{/if}}

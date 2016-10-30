@@ -1,0 +1,21 @@
+<center><h2 class="sub-header">All Books</h2></center>
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each content as |book|}}
+      <tr>
+        <td>{{book.title}}</td>
+        <td>{{book.description}}</td>
+        <td><img src="{{book.image}}" style="width:70px;height:80px;" /></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
