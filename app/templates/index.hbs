@@ -1,6 +1,5 @@
 {{#if session.isAuthenticated}}
-  {{book-listing content=model}}
-  
+  {{outlet}}
 {{else}}
   {{outlet}}
   {{main-slider}}
