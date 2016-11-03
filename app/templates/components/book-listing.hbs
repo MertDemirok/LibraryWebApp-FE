@@ -7,6 +7,7 @@
             <tr>
               <th>#</th>
               <th>Book Name</th>
+              <th>Author</th>
               <th>Description</th>
               <th>Cover Picture</th>
               <th style="width: 36px;"></th>
@@ -17,15 +18,16 @@
             <tr>
               <td>{{book.id}}</td>
               <td>{{book.title}}</td>
+              <td>{{book.author}}</td>
               <td>{{book.description}}</td>
               <td><img src="{{book.image}}" style="width:70px;height:80px;" /></td>
-              <td><button type="button" class="btn btn-info">To reserve</button></td>
+              <td><button {{action 'openModal' }} id="{{book.id}}" class="btn btn-info">To reserve</button></td>
             </tr>
             {{/each}}
           </tbody>
       </table>
 </div>
-<div class="col-xs-2 col-md-offset-6" ></div>
+<div class="col-xs-1 col-md-offset-6" ></div>
   <ul class="pagination">
                 <li class="disabled"><a href="#">«</a></li>
                 <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -36,3 +38,10 @@
                 <li><a href="#">»</a></li>
   </ul>
 </div>
+
+{{#if isShowingModal}}
+  {{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
+  {{modalMessage}}
+  {{reserve-modal}}
+{{/modal-dialog}}
+{{/if}}
