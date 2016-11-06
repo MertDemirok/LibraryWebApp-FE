@@ -8,7 +8,7 @@
               <th>#</th>
               <th>Book Name</th>
               <th>Author</th>
-              <th>Description</th>
+              <th>Summary</th>
               <th>Cover Picture</th>
               <th style="width: 36px;"></th>
             </tr>
@@ -19,7 +19,7 @@
               <td>{{book.id}}</td>
               <td>{{book.title}}</td>
               <td>{{book.author}}</td>
-              <td>{{book.description}}</td>
+              <td>{{book.summary}}</td>
               <td><img src="{{book.image}}" style="width:70px;height:80px;" /></td>
               <td><button {{action 'openModal' }} id="{{book.id}}" class="btn btn-info">To reserve</button></td>
             </tr>
@@ -43,5 +43,10 @@
   {{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
   {{modalMessage}}
   {{reserve-modal}}
+    {{#if session.isAuthenticated}}
+      <center><button {{action 'closeModal' }} id="{{book.id}}" class="btn btn-info">Now To reserve</button></center>
+      {{else}}
+        {{#link-to 'login'}}<center><button id="{{book.id}}" class="btn btn-info">To reserve</button></center>{{/link-to}}
+    {{/if}}
 {{/modal-dialog}}
 {{/if}}
