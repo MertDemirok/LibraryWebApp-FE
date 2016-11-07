@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-  action:{
+export default Ember.Route.extend({
   model() {
     return this.get('store').findAll('book');
   }

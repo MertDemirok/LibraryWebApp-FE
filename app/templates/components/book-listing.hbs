@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="well"><center><h2 class="sub-header">All Books</h2></center></div>
     <div class="col-xs-2"></div>
@@ -21,7 +22,7 @@
               <td>{{book.author}}</td>
               <td>{{book.summary}}</td>
               <td><img src="{{book.image}}" style="width:70px;height:80px;" /></td>
-              <td><button {{action 'openModal' }} id="{{book.id}}" class="btn btn-info">To reserve</button></td>
+              <td><button {{action 'openModal' '1' }} id="{{book.id}}"  class="btn btn-info">To reserve</button></td>
             </tr>
             {{/each}}
           </tbody>
@@ -40,13 +41,15 @@
 </div>
 
 {{#if isShowingModal}}
-  {{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
-  {{modalMessage}}
-  {{reserve-modal}}
+  {{#modal-dialog translucentOverlay=true close='closeModalDialog' }}
+  {{modalMessage }}
+
+    {{reserve-modal }}
+
     {{#if session.isAuthenticated}}
-      <center><button {{action 'closeModal' }} id="{{book.id}}" class="btn btn-info">Now To reserve</button></center>
+      <center><button {{action 'closeModal' }} id="{{book.id}}" class="col-md-12 col-xs-12  btn btn-info">Now To reserve</button></center>
       {{else}}
-        {{#link-to 'login'}}<center><button id="{{book.id}}" class="btn btn-info">To reserve</button></center>{{/link-to}}
+        {{#link-to 'login'}}<center><button id="{{book.id}}" class="col-md-12 col-xs-12 btn btn-info">To reserve</button></center>{{/link-to}}
     {{/if}}
 {{/modal-dialog}}
 {{/if}}

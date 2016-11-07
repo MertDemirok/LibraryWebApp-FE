@@ -7,17 +7,20 @@ body {
   background: #f3f3f3;
 }
 
+hr{
+  border-top: 1px solid #8c8b8b;
+}
+
 .ember-modal-dialog {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #fff;
-  box-shadow: 0 0 10px #111;
+  box-shadow: 0 0 40px #111;
+  width: 50%;
 
-  padding-top: 40px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-
-
+}
+.well{
+  box-shadow: 0 0 50px rgba(1,0,0,0.1);
+  padding-top: 1px;
 }
 
 .ember-modal-overlay.translucent {
@@ -384,7 +387,8 @@ label {
 
 
 .orange-circle-button {
-	box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
+
+	box-shadow: 0 0 50px rgba(1,0,0,0.1);
 	border: .5em solid #E84D0E;
   font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2em;
@@ -401,6 +405,7 @@ label {
 
 }
 .orange-circle-button:hover {
+  box-shadow: 0 0 50px #E84D0E;
 	color:#E84D0E;
   background-color: #e84d0e;
 	text-decoration: none;

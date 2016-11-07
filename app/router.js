@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('about');
   this.route('login');
   this.route('dashboard');
+  this.route('reserve');
 });
 
 export default Router;

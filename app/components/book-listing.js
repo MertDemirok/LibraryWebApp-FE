@@ -7,7 +7,8 @@ export default Ember.Component.extend({
       closeModal(){
         this.send('closeModalDialog')
       },
-      openModal(){
+      openModal(targetId){
+        console.log(targetId)
         this.send('showModalDialog')
         },
       closeModalDialog(){
