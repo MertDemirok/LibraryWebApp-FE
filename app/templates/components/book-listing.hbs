@@ -22,29 +22,21 @@
               <td>{{book.author}}</td>
               <td>{{book.summary}}</td>
               <td><img src="{{book.image}}" style="width:70px;height:80px;" /></td>
-              <td><button {{action 'openModal' '1' }} id="{{book.id}}"  class="btn btn-info">To reserve</button></td>
+              <td><button {{action 'openModal'}} id="{{book.id}}"  class="btn btn-info">To reserve</button></td>
+              {{#link-to "reserve.show" book}}{{book.id}}{{/link-to}}
             </tr>
             {{/each}}
           </tbody>
       </table>
-</div>
-<div class="col-xs-1 col-md-offset-6" ></div>
-  <ul class="pagination">
-                <li class="disabled"><a href="#">«</a></li>
-                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-  </ul>
+ </div>
 </div>
 
 {{#if isShowingModal}}
   {{#modal-dialog translucentOverlay=true close='closeModalDialog' }}
-  {{modalMessage }}
+  {{modalMessage}}
 
-    {{reserve-modal }}
+
+    {{reserve.show book}}
 
     {{#if session.isAuthenticated}}
       <center><button {{action 'closeModal' }} id="{{book.id}}" class="col-md-12 col-xs-12  btn btn-info">Now To reserve</button></center>

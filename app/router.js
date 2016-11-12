@@ -13,7 +13,9 @@ Router.map(function() {
   this.route('about');
   this.route('login');
   this.route('dashboard');
-  this.route('reserve');
+  this.route('reserve', function() {
+    this.route('show', { path: '/:book_id' });
+  });
 });
 
 export default Router;

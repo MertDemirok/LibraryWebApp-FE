@@ -389,7 +389,7 @@ label {
 .orange-circle-button {
 
 	box-shadow: 0 0 50px rgba(1,0,0,0.1);
-	border: .5em solid #E84D0E;
+	border: .4em solid #E84D0E;
   font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2em;
 	line-height: 1.1em;
@@ -405,9 +405,8 @@ label {
 
 }
 .orange-circle-button:hover {
-  box-shadow: 0 0 50px #E84D0E;
+  box-shadow: 0 0 90px #E84D0E;
 	color:#E84D0E;
-  background-color: #e84d0e;
 	text-decoration: none;
 	border-color: #ff7536;
 

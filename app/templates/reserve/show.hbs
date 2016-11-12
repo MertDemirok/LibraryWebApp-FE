@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+    <h4>Book Reserve</h4>
+    <hr>
+  </div>
+  <div class="col-md-6 col-xs-6">
+   <div class="well">
+     <h5>Book Name</h5>
+     <hr>
+     {{model.title}}
+   </div>
+  </div>
+  <div class="col-md-6 col-xs-6">
+    <div class="well">
+      <h5>Author</h5>
+      <hr>
+      {{model.author}}
+    </div>
+  </div>
+  <div class="col-md-3 col-xs-3">
+    <div class="well">
+      <h5>Cover Picture</h5>
+      <hr>
+      <img src="{{model.image}}" style="width:70px;height:80px;" />
+    </div>
+  </div>
+  <div class="col-md-9 col-xs-9">
+    <div class="well">
+      <h5>Summary</h5>
+      <hr>
+      {{model.summary}}
+    </div>
+  </div>
+</div>
+
+{{outlet}}
