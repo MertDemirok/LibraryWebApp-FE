@@ -3,5 +3,14 @@
 {{else}}
   {{main-slider}}
   {{outlet}}
-  {{book-listing content=model}}
+
+  {{#list-filter
+   filter=(action 'filterByBook')
+   as |model|}}
+   <ul class="results">
+      {{#each content as |model|}}
+          {{book-listing book=model}}
+      {{/each}}
+  </ul>
+  {{/list-filter}}
 {{/if}}

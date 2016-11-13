@@ -5,6 +5,15 @@ export default Ember.Controller.extend({
   actions: {
     invalidateSession() {
       this.get('session').invalidate();
+    },
+    filterByBook(param) {
+      if (param !== '') {
+        console.log(param);
+        return this.get('store').query('book', { title: param });
+      } else {
+          console.log("buradayım");
+        return this.get('store').findAll('book');
+      }
     }
   }
 });

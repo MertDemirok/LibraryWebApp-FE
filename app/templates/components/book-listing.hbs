@@ -1,6 +1,5 @@
 
 <div class="container">
-  <div class="well"><center><h2 class="sub-header">All Books</h2></center></div>
     <div class="col-xs-2"></div>
       <div class="well col-xs-8">
         <table class="table table-striped">
@@ -15,8 +14,9 @@
             </tr>
           </thead>
           <tbody>
-            {{#each content as |book|}}
-            <tr>
+
+
+            <tr {{action 'openModal'}} id="{{book.id}}">
               <td>{{book.id}}</td>
               <td>{{book.title}}</td>
               <td>{{book.author}}</td>
@@ -25,7 +25,7 @@
               <td><button {{action 'openModal'}} id="{{book.id}}"  class="btn btn-info">To reserve</button></td>
               {{#link-to "reserve.show" book}}{{book.id}}{{/link-to}}
             </tr>
-            {{/each}}
+            
           </tbody>
       </table>
  </div>
@@ -35,8 +35,8 @@
   {{#modal-dialog translucentOverlay=true close='closeModalDialog' }}
   {{modalMessage}}
 
+    {{reserve-modal index}}
 
-    {{reserve.show book}}
 
     {{#if session.isAuthenticated}}
       <center><button {{action 'closeModal' }} id="{{book.id}}" class="col-md-12 col-xs-12  btn btn-info">Now To reserve</button></center>

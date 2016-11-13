@@ -18,6 +18,19 @@ hr{
   width: 50%;
 
 }
+.light {
+    font-weight: 300;
+}
+
+.list-filter input {
+    padding: 5px;
+    font-size: 18px;
+    width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.90);
+    border: solid 4px lightgray;
+    display: block;
+}
 .well{
   box-shadow: 0 0 50px rgba(1,0,0,0.1);
   padding-top: 1px;
