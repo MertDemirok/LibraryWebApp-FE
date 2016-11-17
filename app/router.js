@@ -12,7 +12,14 @@ Router.map(function() {
   this.route('library');
   this.route('about');
   this.route('login');
-  this.route('dashboard');
+  this.route('dashboard', function() {
+    this.route('reading');
+    this.route('profile');
+    this.route('help');
+    this.route('bug');
+    this.route('statistics');
+    this.route('settings');
+  });
   this.route('reserve', function() {
     this.route('show', { path: '/:book_id' });
   });

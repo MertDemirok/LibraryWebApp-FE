@@ -3,36 +3,24 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    {{#link-to 'dashboard'}}<a>Home</a>{{/link-to}}
+                    {{#link-to 'dashboard.index'}}<a>Home</a>{{/link-to}}
                 </li>
                 <li>
-                    <a href="#">Reading Statistics</a>
+                    {{#link-to 'dashboard.statistics'}}<a href="#">Reading Statistics</a>{{/link-to}}
                 </li>
                 <li>
-                    <a href="#">Read</a>
+                    {{#link-to 'dashboard.reading'}}<a>Reading</a>{{/link-to}}
                 </li>
                 <li>
-                    <a href="#">Profile</a>
+                    {{#link-to 'dashboard.profile'}}<a href="#">Profile</a>{{/link-to}}
                 </li>
                 <li>
-                    <a href="#">Help</a>
+                      {{#link-to 'dashboard.help'}}<a href="#">Help</a>{{/link-to}}
                 </li>
                 <li>
-                    <a href="#">BUG</a>
+                    {{#link-to 'dashboard.bug'}}<a href="#">Bug Reports</a>{{/link-to}}
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                          {{reading-values}}
-                </div>
-              </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-    </div>
+</div>

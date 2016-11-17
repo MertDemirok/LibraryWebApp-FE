@@ -1,0 +1,12 @@
+{{reading-values}}
+{{#list-filter
+ filter=(action 'filterByBook')
+ as |model|}}
+ <ul class="results">
+
+        {{book-listing content=model}}
+
+</ul>
+{{/list-filter}}
+
+{{outlet}}

@@ -7,6 +7,13 @@ body {
   background: #f3f3f3;
 }
 
+
+.dashboard-body{
+  padding-top: 10px !important;
+  padding-left: 240px !important;
+  padding-right: 155px !important;
+}
+
 hr{
   border-top: 1px solid #8c8b8b;
 }
@@ -327,8 +334,8 @@ label {
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 50px;
+    text-indent: 30px;
+    line-height: 40px;
 }
 
 .sidebar-nav li a {
@@ -350,7 +357,7 @@ label {
 
 .sidebar-nav > .sidebar-brand {
     height: 65px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 60px;
 }
 
@@ -363,8 +370,7 @@ label {
     background: none;
 }
 .dashbooklist{
-  padding-left: 17%;
-
+  padding-right: 10px;
 }
 
 @media(min-width:768px) {
@@ -377,7 +383,7 @@ label {
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 220px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -396,7 +402,6 @@ label {
 }
 
 
-.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}
 
 
 .orange-circle-button {
